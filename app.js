@@ -16,6 +16,7 @@ mongoose.connect(
 mongoose.Promise = global.Promise;
 
 app.use(morgan("dev"));
+app.use("/uploads", express.static("uploads"));
 app.use(bodyParse.urlencoded({ extended: false })); // support only simple body url encoded
 app.use(bodyParse.json());
 
